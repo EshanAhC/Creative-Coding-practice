@@ -19,8 +19,9 @@ void draw()
   fill(blueRec);
   rect(130,225,240,50);
   fill(255,255,255);
-  textSize(32);
+  textSize(34);
   strokeWeight(0.5);
-  text(logoText,142.5,260);
+  textAlign(CENTER);
+  text(logoText,250,260);
   
 }
