@@ -8,24 +8,20 @@ void setup() {
   y= height/2;
   side = width/6;
   rectMode(CENTER);
+  textSize(8);
+  textAlign(CENTER);
 }
 
 
 void draw() {
   background(255);
+  x = constrain(x,side/2,width-side/2);
+  y = constrain(y,side/2,height-side/2);
+  fill(0);
+  text("x = " + str(x) + " y = " + str(y), width-30, height-30);
+  noFill();
   rect(x, y, side, side);
-  if (x< side/2) {
-    x = side/2;
-  }
-  if (x>width-side/2) {
-    x = width-side/2;
-  }
-  if (y<side/2) {
-    y=side/2;
-  }
-  if (y>height-side/2) {
-    y=height-side/2;
-  }
+  
 }
 
 void keyPressed() {
